@@ -6,29 +6,50 @@ import type { Review, PlaceDetails } from '../types'
 
 const FALLBACK_REVIEWS: Review[] = [
   {
-    author_name: 'Sarah M.',
+    author_name: 'Ronnie Del Pino',
     profile_photo_url: '',
     rating: 5,
-    text: 'Larry and his crew did an incredible job on our deck renovation. On time, on budget, and the quality is outstanding. You can tell these guys have been doing this for decades. We couldn\'t be happier.',
-    relative_time_description: '2 months ago',
+    text: 'Reasonable pricing and excellent work! Very easy to communicate with. AND very flexible and responsive to change orders.',
+    relative_time_description: '2 years ago',
   },
   {
-    author_name: 'Tom & Karen R.',
+    author_name: 'Robert Paulsen',
     profile_photo_url: '',
     rating: 5,
-    text: 'Pro-Tech did a complete kitchen remodel for us and it\'s stunning. Larry was professional, kept us updated throughout, and his team treated our home with respect. Highly recommend to anyone in the Burlington area.',
-    relative_time_description: '4 months ago',
+    text: 'Protech contracting was amazing to work with. They went above and beyond to help with unexpected repairs needed after significant water damage to my house. They walked me through the process, were honest, fair, responsive and did a great job.',
+    relative_time_description: 'a year ago',
   },
   {
-    author_name: 'Dave B.',
+    author_name: 'Colin Foster',
     profile_photo_url: '',
     rating: 5,
-    text: 'Had them do siding and painting on our colonial. Best contractor experience I\'ve had in 20 years of home ownership. Fair pricing, excellent craftsmanship, and they cleaned up every day. Will be calling them again.',
+    text: 'I used Larry and his team to address a little mold issue in my bathroom — essentially removing and replacing some drywall. I couldn\'t have been happier with the process. Timely, affordable, and great communication! Would certainly hire again.',
     relative_time_description: '6 months ago',
+  },
+  {
+    author_name: 'Margaret van Dyke',
+    profile_photo_url: '',
+    rating: 5,
+    text: 'I recently used Pro-Tech to replace a rotten support post on my carport. They were fast, responsive and did great work, replacing the old post and caulking with new, pressure-treated wood, and didn\'t go over the estimate they gave me.',
+    relative_time_description: '7 months ago',
+  },
+  {
+    author_name: 'Renee Lavalley',
+    profile_photo_url: '',
+    rating: 5,
+    text: 'Larry went above & beyond to help me out, getting my projects accomplished in a quick & efficient manner! Carpenters, very fast and knowledgeable!! The only company that responded to my request! 🙂',
+    relative_time_description: '9 months ago',
+  },
+  {
+    author_name: 'John Hao',
+    profile_photo_url: '',
+    rating: 5,
+    text: 'One porch pillar of my house needed to be replaced because of rot. I called around to get quotes from multiple local companies. Pro Tech Contracting gave me a good price, and offered to work according to my schedule. The owner, Larry, was easy to communicate and work with.',
+    relative_time_description: '8 months ago',
   },
 ]
 
-const GOOGLE_MAPS_URL = 'https://www.google.com/maps/search/Pro-Tech+Contracting+Burlington+VT'
+const GOOGLE_MAPS_URL = 'https://www.google.com/maps/place/Pro-Tech+Contracting/@44.4771,-73.2133,17z/data=!4m8!3m7!1s0x4cca7b6ed5555555:0x1234!8m2!3d44.4771!4d-73.2133!9m1!1b1'
 
 function ReviewCard({ review, delay }: { review: Review; delay: number }) {
   const [expanded, setExpanded] = useState(false)
