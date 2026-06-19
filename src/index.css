@@ -1,0 +1,134 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    font-family: 'Inter', sans-serif;
+    color: #2C2C2C;
+  }
+
+  body {
+    background-color: #FAFAFA;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4 {
+    font-family: 'Playfair Display', serif;
+  }
+}
+
+@layer utilities {
+  .clip-diagonal {
+    clip-path: polygon(0 0, 100% 0, 100% 92%, 0 100%);
+  }
+  .clip-diagonal-rev {
+    clip-path: polygon(0 8%, 100% 0, 100% 100%, 0 100%);
+  }
+}
+
+/* TipTap editor styles */
+.tiptap {
+  outline: none;
+}
+
+.tiptap p.is-editor-empty:first-child::before {
+  color: #888;
+  content: attr(data-placeholder);
+  float: left;
+  height: 0;
+  pointer-events: none;
+}
+
+.tiptap h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.tiptap h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-top: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.tiptap ul, .tiptap ol {
+  padding-left: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.tiptap ul { list-style-type: disc; }
+.tiptap ol { list-style-type: decimal; }
+
+.tiptap blockquote {
+  border-left: 4px solid #C8A96E;
+  padding-left: 1rem;
+  color: #888;
+  margin: 1rem 0;
+  font-style: italic;
+}
+
+.tiptap a {
+  color: #C8A96E;
+  text-decoration: underline;
+}
+
+/* Blog post content */
+.prose-blog h2 {
+  font-size: 1.75rem;
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  margin-top: 2rem;
+  margin-bottom: 0.75rem;
+  color: #1A1A1A;
+}
+
+.prose-blog h3 {
+  font-size: 1.35rem;
+  font-family: 'Playfair Display', serif;
+  font-weight: 600;
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: #1A1A1A;
+}
+
+.prose-blog p {
+  margin-bottom: 1rem;
+  line-height: 1.8;
+  color: #2C2C2C;
+}
+
+.prose-blog ul, .prose-blog ol {
+  padding-left: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.prose-blog ul { list-style-type: disc; }
+.prose-blog ol { list-style-type: decimal; }
+
+.prose-blog li { margin-bottom: 0.25rem; line-height: 1.7; }
+
+.prose-blog blockquote {
+  border-left: 4px solid #C8A96E;
+  padding-left: 1rem;
+  color: #888;
+  margin: 1.5rem 0;
+  font-style: italic;
+}
+
+.prose-blog a {
+  color: #C8A96E;
+  text-decoration: underline;
+}
+
+.prose-blog img {
+  border-radius: 0.5rem;
+  max-width: 100%;
+  margin: 1.5rem auto;
+}
+
+.prose-blog strong { font-weight: 600; }
+.prose-blog em { font-style: italic; }

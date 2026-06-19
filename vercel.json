@@ -1,0 +1,10 @@
+{
+  "rewrites": [
+    { "source": "/api/(.*)", "destination": "/api/$1" },
+    { "source": "/(.*)", "destination": "/index.html" }
+  ],
+  "functions": {
+    "api/reviews.js": { "maxDuration": 10 },
+    "api/contact.js": { "maxDuration": 10 }
+  }
+}
