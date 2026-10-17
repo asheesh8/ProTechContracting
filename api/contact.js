@@ -29,6 +29,9 @@ ${description || 'No description provided.'}
 Sent via ProTech Contracting website
   `.trim()
 
+  // Without a Resend key the request is logged and reported as sent, so the
+  // form "works" in development. In production this means enquiries are lost —
+  // make sure RESEND_API_KEY is set.
   if (!resendKey) {
     console.log('CONTACT FORM (no Resend key, logging only):', { name, email, subject })
     return res.status(200).json({ ok: true })

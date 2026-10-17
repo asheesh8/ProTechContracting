@@ -1,3 +1,6 @@
+// Runs server-side so the Google Places key never reaches the browser. Any
+// failure (no key, place not found, API error) returns the built-in fallback
+// reviews instead of an error, so the section always renders.
 export default async function handler(req, res) {
   res.setHeader('Access-Control-Allow-Origin', '*')
 
