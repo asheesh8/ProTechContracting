@@ -2,6 +2,10 @@ import { useEffect, useState } from 'react'
 import { Navigate, Outlet } from 'react-router-dom'
 import { supabase } from '../lib/supabase'
 
+// Client-side gate only: it decides what to render, not what data is reachable.
+// The real protection is row-level security in supabase-schema.sql, which lets
+// any *authenticated* user write posts — so keep Supabase sign-ups disabled and
+// create the admin account by hand.
 export default function AdminRoute() {
   const [checking, setChecking] = useState(true)
   const [authed, setAuthed] = useState(false)
